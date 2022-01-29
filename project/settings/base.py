@@ -22,7 +22,8 @@ INSTALLED_APPS = [
     'user',
 
     # Third party apps
-    'corsheaders'
+    'corsheaders',
+    'strawberry.django'
 ]
 
 MIDDLEWARE = [
