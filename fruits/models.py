@@ -18,3 +18,6 @@ class Color(models.Model):
         GREEN   = "Verde"
 
     name = models.CharField(choices=ColorChoices.choices, max_length=20)
+
+    def __str__(self) -> str:
+        return f"{self.name}-{self.pk}"

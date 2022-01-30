@@ -26,10 +26,17 @@ class Fruit:
 class Color:
     id: auto
     name: auto
-    fruits: auto
+    fruits: List[Fruit]
 
 @strawberry_django.input(models.Color)
 class ColorInput:
     id: auto
     name: auto
     fruits: auto
+
+@strawberry_django.input(models.Fruit)
+class FruitInput:
+    id: auto
+    name: auto
+    amount: auto
+    color: auto

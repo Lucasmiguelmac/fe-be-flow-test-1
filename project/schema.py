@@ -2,7 +2,7 @@ import strawberry
 from typing import List
 from strawberry_django import mutations
 
-from fruits.types import Fruit, FruitInput, FruitPartialInput, Color, ColorInput
+from fruits.types import Fruit, FruitInput, Color, ColorInput
 
 
 @strawberry.type
@@ -13,5 +13,6 @@ class Query:
 @strawberry.type
 class Mutation:
     createColor: Color = mutations.create(ColorInput)
+    createFruit: Fruit = mutations.create(FruitInput)
 
 schema = strawberry.Schema(query=Query, mutation=Mutation)
